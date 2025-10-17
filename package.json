@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fontsource/noto-serif-kr": "^5.2.8",
     "@fontsource/open-sans": "^5.2.7",
     "@fontsource/poppins": "^5.2.7",
     "@fontsource/roboto": "^5.2.8",
