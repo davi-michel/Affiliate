@@ -31,6 +31,33 @@ export default function CardView() {
             </div>
             <div>
                 <h3 className="font-semibold text-2xl mt-2">Promoções relacionadas</h3>
+                <div className="flex justify-between">
+                    <a href="#">
+                        <div className="bg-[#EFEAE4] rounded-2xl flex justify-center items-center p-4 mt-8 relative w-56 h-56">
+                            <p className="absolute top-0 left-1 m-2 font-semibold">Moda</p>
+                            <Image
+                                src="/images/shirt.png"
+                                alt="Shirt"
+                                fill
+                                className="object-contain rotate-12"
+                            />
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div className="bg-[#EFEAE4] rounded-2xl flex justify-center items-center p-4 mt-8 relative w-56 h-56">
+                            <p className="absolute top-0 left-1 m-2 font-semibold">Games</p>
+                            <Image
+                                src="/images/controller.png"
+                                alt="Controller"
+                                width={120}
+                                height={120}
+                                className="object-contain rotate-12"
+                            />
+                        </div>
+                    </a>
+
+                </div>
             </div>
         </div>
     )
