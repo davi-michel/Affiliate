@@ -1,6 +1,6 @@
 export default function Header() {
     return (
-        <div className="flex justify-center gap-32">
+        <div className="flex justify-center gap-32 p-5">
             <h1 className="text-4xl">
                 PromoLink
             </h1>
