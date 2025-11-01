@@ -1,12 +1,16 @@
 import Header from "@/app/components/Header";
 import HeroSection from "@/app/components/HeroSection";
+import CardView from "./components/CardView";
 
 function App() {
   return (
-    <div className="bg-[#f6ede1] min-h-screen font-poppins py-10">
-      <div className="bg-white w-[90%] max-w-[70%] mx-auto rounded-2xl shadow-md p-6">
+    <div className="bg-[#f6ede1] min-h-screen font-poppins gap-5 py-10 flex px-6">
+      <div className="bg-white w-[90%] max-w-[70%] mx-auto rounded-2xl shadow-md">
         <Header />
         <HeroSection />
+      </div>
+      <div className="max-w-[30%] mx-auto">
+        <CardView />
       </div>
     </div>
   );
