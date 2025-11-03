@@ -1,0 +1,32 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "name": "Moletom Preto",
+            "description": "Confeccionado em algodão de alta qualidade, o moletom preto combina conforto e estilo em todas as ocasiões. Seu tecido macio oferece toque suave à pele, enquanto o design minimalista e versátil se adapta perfeitamente a qualquer look. Ideal para dias frios ou momentos casuais com muito charme.",
+            "price": 149.00,
+            "category": "Moda"
+        },
+        {
+            "id": 2,
+            "name": "Apple Watch",
+            "description": "Feita de fluorelastômero resistente, a pulseira esportiva é durável e surpreendentemente macia. O material flexível e compacto se encaixa com perfeição e suavidade no seu pulso. O fecho inovador na forma de pino garante um ajuste perfeito.",
+            "price": 1299.90,
+            "category": "Tecnologia"
+        },
+        {
+            "id": 3,
+            "name": "Controle Xbox",
+            "description": "Projetado para oferecer precisão e conforto, o controle Xbox garante uma experiência de jogo envolvente e fluida. Seus gatilhos sensíveis e textura antiderrapante proporcionam firmeza nas mãos, enquanto a conectividade rápida permite partidas sem interrupções. Um verdadeiro aliado para gamers exigentes.",
+            "price": 299.90,
+            "category": "Games"
+        },
+        {
+            "id": 4,
+            "name": "Sofá Sofisticado",
+            "description": "Com design elegante e acabamento refinado, o sofá sofisticado transforma qualquer ambiente em um espaço de conforto e estilo. Seu estofado macio e estrutura robusta proporcionam o equilíbrio ideal entre firmeza e aconchego. Perfeito para relaxar e receber visitas com requinte.",
+            "price": 499.90,
+            "category": "Casa"
+        }
+    ]
+}
