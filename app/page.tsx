@@ -1,6 +1,8 @@
 import Header from "@/app/components/Header";
 import HeroSection from "@/app/components/HeroSection";
 import CardView from "./components/CardView";
+import Card from "@/app/components/Card";
+import { title } from "process";
 
 function App() {
   return (
@@ -9,6 +11,12 @@ function App() {
         <Header />
         <div className="px-20">
           <HeroSection />
+        </div>
+        <div className="px-22 flex justify-between">
+          <Card price={149.00} image="/images/shirt.png" category="Moda" />
+          <Card price={149.00} image="/images/shirt.png" category="Moda" />
+          <Card price={149.00} image="/images/shirt.png" category="Moda" />
+          <Card price={149.00} image="/images/shirt.png" category="Moda" />
         </div>
       </div>
       <div className="max-w-[30%] mx-auto">
