@@ -1,6 +1,8 @@
 import Header from "@/app/components/Header";
 import HeroSection from "@/app/components/HeroSection";
 import CardView from "./components/CardView";
+import Card from "@/app/components/Card";
+import { title } from "process";
 import { Instagram, Twitter, Youtube } from 'lucide-react';
 
 function App() {
@@ -10,6 +12,12 @@ function App() {
         <Header />
         <div className="px-20">
           <HeroSection />
+        </div>
+        <div className="px-22 flex justify-between">
+          <Card price={149.00} image="/images/shirt.png" category="Moda" />
+          <Card price={149.00} image="/images/shirt.png" category="Moda" />
+          <Card price={149.00} image="/images/shirt.png" category="Moda" />
+          <Card price={149.00} image="/images/shirt.png" category="Moda" />
         </div>
         <div className="border-t mt-10 border-t-gray-300 font-normal text-md mx-auto px-20 w-5/6 py-5 flex justify-between items-center">
           <div className="flex gap-8">
