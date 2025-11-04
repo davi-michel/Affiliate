@@ -13,13 +13,16 @@ function App() {
         <div className="px-20">
           <HeroSection />
         </div>
-        <div className="px-22 flex justify-between">
-          <Card price={149.00} image="/images/shirt.png" category="Moda" />
-          <Card price={149.00} image="/images/shirt.png" category="Moda" />
-          <Card price={149.00} image="/images/shirt.png" category="Moda" />
-          <Card price={149.00} image="/images/shirt.png" category="Moda" />
+        <div className="px-22 mt-6">
+          <h2 className="text-2xl font-semibold">Comprar</h2>
+          <div className="flex justify-between">
+            <Card price={149.00} image="/images/shirt.png" category="Moda" />
+            <Card price={149.00} image="/images/shirt.png" category="Moda" />
+            <Card price={149.00} image="/images/shirt.png" category="Moda" />
+            <Card price={149.00} image="/images/shirt.png" category="Moda" />
+          </div>
         </div>
-        <div className="border-t mt-10 border-t-gray-300 font-normal text-md mx-auto px-20 w-5/6 py-5 flex justify-between items-center">
+        <div className="border-t mt-10 mb-5 border-t-gray-300 font-normal text-md mx-auto px-10 w-5/6 py-5 flex justify-between items-center">
           <div className="flex gap-8">
             <a href="#">Política de Privacidade</a>
             <a href="#">Contato</a>

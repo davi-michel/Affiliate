@@ -26,7 +26,7 @@ export default function Card({ price, category, image }: CardProps) {
         <h2 className="text-xl font-semibold text-gray-800 mb-2 text-center">
           {formattedPrice}
         </h2>
-        <button className="px-4 py-2 bg-[#4A4A4A] text-white rounded-lg hover:bg-indigo-700 transition">
+        <button className="px-4 py-2 bg-[#4A4A4A] text-white rounded-lg border hover:bg-white hover:text-black hover:border transition cursor-pointer">
           Ver Promoção
         </button>
       </div>

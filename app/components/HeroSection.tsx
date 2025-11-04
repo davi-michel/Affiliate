@@ -10,7 +10,7 @@ const notoSerifKr = Noto_Serif_KR({
 
 export default function HeroSection() {
   return (
-    <section className="flex justify-center bg-[#EFEAE4] gap-32 py-20 px-8 rounded-2xl">
+    <section className="flex justify-center bg-[#EFEAE4] gap-32 py-16 px-8 rounded-xl">
       <div className="border border-gray-400 px-28 py-4 rounded-xl">
         <Image src="/images/headphonerosa.png" alt="Headphone rosa" width={200} height={200}/>
       </div>
