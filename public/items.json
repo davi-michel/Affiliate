@@ -6,6 +6,7 @@
             "description": "Confeccionado em algodão de alta qualidade, o moletom preto combina conforto e estilo em todas as ocasiões. Seu tecido macio oferece toque suave à pele, enquanto o design minimalista e versátil se adapta perfeitamente a qualquer look. Ideal para dias frios ou momentos casuais com muito charme.",
             "price": 149.00,
             "category": "Moda",
+            "image":"/images/shirt.png",
             "link": "https://shopee.com.br/product/609507916/10496808664?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkVHQ3ZkZSUTMrR3pBWmZZNzdrcnRBMlduQWxoRmtwMWpEMDRNeGRlQTMxR2xCWk02VU15V0M0Mm1qTGVMQ2dIUVIvNnp3WVVmdWZ3K1pzamsyT2dHL1VUNSs3Y2JOY1JRSmFKbGVnZ1BvYytFN1owZTM4UytNeExqN05yUHBYNk9BPT0&model=180834301020"
         },
         {
@@ -14,6 +15,7 @@
             "description": "Feita de fluorelastômero resistente, a pulseira esportiva é durável e surpreendentemente macia. O material flexível e compacto se encaixa com perfeição e suavidade no seu pulso. O fecho inovador na forma de pino garante um ajuste perfeito.",
             "price": 1299.90,
             "category": "Tecnologia",
+            "image":"/images/apple_watch.png",
             "link": "https://www.amazon.com.br/Apple-Watch-Caixa-estelar-alum%C3%ADnio/dp/B0DGK8NBPH?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=A1ZZFT5FULY4LN&th=1"
         },
         {
@@ -22,6 +24,7 @@
             "description": "Projetado para oferecer precisão e conforto, o controle Xbox garante uma experiência de jogo envolvente e fluida. Seus gatilhos sensíveis e textura antiderrapante proporcionam firmeza nas mãos, enquanto a conectividade rápida permite partidas sem interrupções. Um verdadeiro aliado para gamers exigentes.",
             "price": 299.90,
             "category": "Games",
+            "image":"/images/controller.png",
             "link": "https://www.amazon.com.br/Controle-com-fio-Power-S%C3%A9rie/dp/B08F4444HM?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1ZZFT5FULY4LN"
         },
         {
@@ -30,6 +33,7 @@
             "description": "Com design elegante e acabamento refinado, o sofá sofisticado transforma qualquer ambiente em um espaço de conforto e estilo. Seu estofado macio e estrutura robusta proporcionam o equilíbrio ideal entre firmeza e aconchego. Perfeito para relaxar e receber visitas com requinte.",
             "price": 499.90,
             "category": "Casa",
+            "image":"/images/sofa.png",
             "link": "https://www.casasbahia.com.br/sofa-cama-3-lugares-195cm-veludo-holanda-berflex/p/1566087160?utm_medium=Cpc&utm_source=google_freelisting&IdSku=1566087160&idLojista=15301&tipoLojista=3P&srsltid=AfmBOoq86rwKsRjsWgALMqDJh9sS67pvurLmPYlRM5dGfYQfMcFDOdQtBYE"
         }
     ]

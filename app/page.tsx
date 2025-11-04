@@ -4,8 +4,16 @@ import CardView from "./components/CardView";
 import Card from "@/app/components/Card";
 import { title } from "process";
 import { Instagram, Twitter, Youtube } from 'lucide-react';
+import items from "@/public/items.json"
 
 function App() {
+  
+  let teste = items.items.map(e =>{
+    console.log(e.name)
+  })
+
+  
+
   return (
     <div className="bg-[#f6ede1] min-h-screen font-poppins gap-10 py-6 flex px-20">
       <div className="bg-white w-[90%] max-w-[70%] mx-auto rounded-2xl shadow-md">
@@ -16,10 +24,9 @@ function App() {
         <div className="px-22 mt-6">
           <h2 className="text-2xl font-semibold">Comprar</h2>
           <div className="flex justify-between">
-            <Card price={149.00} image="/images/shirt.png" category="Moda" />
-            <Card price={149.00} image="/images/shirt.png" category="Moda" />
-            <Card price={149.00} image="/images/shirt.png" category="Moda" />
-            <Card price={149.00} image="/images/shirt.png" category="Moda" />
+            {items.items.map((e, index) =>(
+              <Card key={index} price={e.price} image={e.image} category={e.category} />
+            ))}      
           </div>
         </div>
         <div className="border-t mt-10 mb-5 border-t-gray-300 font-normal text-md mx-auto px-10 w-5/6 py-5 flex justify-between items-center">
