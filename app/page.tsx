@@ -1,34 +1,57 @@
+'use client'
+
 import Header from "@/app/components/Header";
 import HeroSection from "@/app/components/HeroSection";
 import CardView from "./components/CardView";
 import Card from "@/app/components/Card";
-import { title } from "process";
 import { Instagram, Twitter, Youtube } from 'lucide-react';
 import items from "@/public/items.json"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-function App() {
-  
-  let teste = items.items.map(e =>{
-    console.log(e.name)
-  })
+interface Product {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+  image: string;
+  link: string;
+}
 
-  
+export default function Page() {
+  const [selectedCard, setSelectedCard] = useState<Product | null>(null);
+
+  const selectCard = (item: any) => setSelectedCard(item);
 
   return (
-    <div className="bg-[#f6ede1] min-h-screen font-poppins gap-10 py-6 flex px-20">
-      <div className="bg-white w-[90%] max-w-[70%] mx-auto rounded-2xl shadow-md">
+    <div className="bg-[#f6ede1] min-h-screen font-poppins gap-10 py-6 flex px-20 overflow-hidden">
+      <motion.div
+        className="bg-white w-[90%] max-w-[70%] mx-auto rounded-2xl shadow-md"
+        animate={{ x: selectedCard ? -40 : 0, opacity: selectedCard ? 0.95 : 1 }}
+        transition={{ type: "spring", stiffness: 60, damping: 15 }}
+      >
         <Header />
         <div className="px-20">
           <HeroSection />
         </div>
+
         <div className="px-22 mt-6">
           <h2 className="text-2xl font-semibold">Comprar</h2>
-          <div className="flex justify-between">
-            {items.items.map((e, index) =>(
-              <Card key={index} price={e.price} image={e.image} category={e.category} />
-            ))}      
+          <div className="flex justify-between flex-wrap gap-4">
+            {items.items.map((e, index) => (
+              <div key={index}>
+                <Card
+                  onClick={() => selectCard(e)}
+                  price={e.price}
+                  image={e.image}
+                  category={e.category}
+                />
+              </div>
+            ))}
           </div>
         </div>
+
         <div className="border-t mt-10 mb-5 border-t-gray-300 font-normal text-md mx-auto px-10 w-5/6 py-5 flex justify-between items-center">
           <div className="flex gap-8">
             <a href="#">Política de Privacidade</a>
@@ -41,12 +64,29 @@ function App() {
             <Youtube size={24} className="cursor-pointer" />
           </div>
         </div>
-      </div>
-      <div className="max-w-[30%] mx-auto">
-        <CardView />
-      </div>
+      </motion.div>
+
+      <AnimatePresence mode="wait">
+        {selectedCard && (
+          <motion.div
+            key={selectedCard.id}
+            className="max-w-[30%] mx-auto"
+            initial={{ x: 150, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: 150, opacity: 0 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+          >
+            <CardView
+              onclick={() => setSelectedCard(null)}
+              name={selectedCard.name}
+              description={selectedCard.description}
+              image={selectedCard.image}
+              price={selectedCard.price}
+              category={selectedCard.category}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
-
-export default App;

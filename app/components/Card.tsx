@@ -4,9 +4,10 @@ interface CardProps {
   price: number;
   image: string;
   category: string;
+  onClick: () => void;
 };
 
-export default function Card({ price, category, image }: CardProps) {
+export default function Card({ price, category, image, onClick }: CardProps) {
   const formattedPrice = price.toLocaleString("pt-BR", {
     style: "currency",
     currency: "BRL",
@@ -23,12 +24,12 @@ export default function Card({ price, category, image }: CardProps) {
         />
       </div>
 
-      <div className="flex flex-col px-5 py-2 bg-white rounded-b-xl gap-5">
+      <div className="flex flex-col px-5 py-4 bg-white rounded-b-xl gap-5">
         <p className="absolute top-0 left-1 m-2 font-semibold">Moda</p>
         <h2 className="text-xl font-semibold text-gray-800 mb-2 text-center">
           {formattedPrice}
         </h2>
-        <button className="px-4 py-2 bg-[#4A4A4A] text-white rounded-lg border hover:bg-white hover:text-black hover:border transition cursor-pointer">
+        <button onClick={onClick} className="px-4 py-2 bg-[#4A4A4A] text-white rounded-lg border hover:bg-white hover:text-black hover:border transition cursor-pointer">
           Ver Promoção
         </button>
       </div>
