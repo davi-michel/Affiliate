@@ -43,6 +43,7 @@ export default function Page() {
               <div key={index}>
                 <Card
                   onClick={() => selectCard(e)}
+                  name={e.name}
                   price={e.price}
                   image={e.image}
                   category={e.category}

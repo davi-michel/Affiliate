@@ -1,13 +1,14 @@
 import Image from "next/image";
 
 interface CardProps {
+  name:string;
   price: number;
   image: string;
   category: string;
   onClick: () => void;
 };
 
-export default function Card({ price, category, image, onClick }: CardProps) {
+export default function Card({ price, category, image, name, onClick }: CardProps) {
   const formattedPrice = price.toLocaleString("pt-BR", {
     style: "currency",
     currency: "BRL",
@@ -19,13 +20,14 @@ export default function Card({ price, category, image, onClick }: CardProps) {
         <Image
           src={image}
           alt={category}
-          fill
+          width={180}
+          height={100}
           className="object-cover rounded-t-xl"
         />
       </div>
 
       <div className="flex flex-col px-5 py-4 bg-white rounded-b-xl gap-5">
-        <p className="absolute top-0 left-1 m-2 font-semibold">Moda</p>
+        <p className="absolute top-0 left-1 m-2 font-semibold text-xs">{name}</p>
         <h2 className="text-xl font-semibold text-gray-800 mb-2 text-center">
           {formattedPrice}
         </h2>
