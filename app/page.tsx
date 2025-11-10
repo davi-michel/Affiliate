@@ -25,20 +25,20 @@ export default function Page() {
   const selectCard = (item: any) => setSelectedCard(item);
 
   return (
-    <div className="bg-[#f6ede1] min-h-screen font-poppins gap-10 py-6 flex px-20 overflow-hidden">
+    <div className="bg-[#f6ede1] lg:min-h-screen font-poppins gap-10 py-2 lg:py-6 flex lg:flex-row px-2 lg:px-20 overflow-hidden">
       <motion.div
-        className="bg-white w-[90%] max-w-[70%] mx-auto rounded-2xl shadow-md"
+        className="bg-white lg:w-[90%] lg:max-w-[70%] mx-auto rounded-2xl shadow-md"
         animate={{ x: selectedCard ? -40 : 0, opacity: selectedCard ? 0.95 : 1 }}
         transition={{ type: "spring", stiffness: 60, damping: 15 }}
       >
         <Header />
-        <div className="px-20">
+        <div className="lg:px-22 px-3 mt-3">
           <HeroSection />
         </div>
 
-        <div className="px-22 mt-6">
-          <h2 className="text-2xl font-semibold">Comprar</h2>
-          <div className="flex justify-between flex-wrap gap-4">
+        <div className="lg:px-4 flex flex-col justify-center px-auto mt-6">
+          <h2 className="text-center text-2xl font-semibold">Comprar</h2>
+          <div className="flex flex-col lg:flex-row justify-between lg:mx-20 mx-4 flex-wrap">
             {items.items.map((e, index) => (
               <div key={index}>
                 <Card
@@ -53,13 +53,14 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="border-t mt-10 mb-5 border-t-gray-300 font-normal text-md mx-auto px-10 w-5/6 py-5 flex justify-between items-center">
+        <div className="border-t mt-10 lg:mb-2 border-t-gray-300 font-normal text-md lg:mx-auto mx-4 lg:px-10 lg:w-5/6 lg:py-5 py-3 flex flex-col gap-4 lg:gap-0 lg:flex-row justify-between items-center text-[#2e2e2e]">
           <div className="flex gap-8">
             <a href="#">Política de Privacidade</a>
             <a href="#">Contato</a>
             <a href="#">Sobre nós</a>
           </div>
           <div className="flex gap-4">
+            <p className="lg:hidden flex">Redes Sociais:</p>
             <Twitter size={24} className="cursor-pointer" />
             <Instagram size={24} className="cursor-pointer" />
             <Youtube size={24} className="cursor-pointer" />
