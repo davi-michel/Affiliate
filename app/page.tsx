@@ -25,10 +25,9 @@ export default function Page() {
   const selectCard = (item: any) => setSelectedCard(item);
 
   return (
-    <div className="bg-[#f6ede1] lg:min-h-screen font-poppins gap-10 py-2 lg:py-6 flex lg:flex-row px-2 lg:px-20 overflow-hidden">
+    <div className="bg-[#f6ede1] lg:min-h-screen font-poppins gap-10 py-2 lg:py-6 flex flex-col lg:flex-row px-2 lg:px-20 overflow-hidden">
       <motion.div
         className="bg-white lg:w-[90%] lg:max-w-[70%] mx-auto rounded-2xl shadow-md"
-        animate={{ x: selectedCard ? -40 : 0, opacity: selectedCard ? 0.95 : 1 }}
         transition={{ type: "spring", stiffness: 60, damping: 15 }}
       >
         <Header />
@@ -101,13 +100,11 @@ export default function Page() {
                 initial={{ y: "100%", opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: "100%", opacity: 0 }}
-                transition={{ type: "spring", stiffness: 120, damping: 15 }}
-                className="bg-white rounded-t-3xl shadow-lg w-full h-[85%] p-5 flex flex-col justify-between"
+                transition={{ type: "spring", stiffness: 130, damping: 15 }}
+                className="bg-white rounded-t-3xl shadow-lg w-full h-[95%] flex flex-col justify-between"
               >
-                {/* Handle visual */}
                 <div className="w-12 h-1.5 bg-gray-300 rounded-full mx-auto mb-3" />
 
-                {/* Conteúdo do card (reduz proporcionalmente) */}
                 <div className="flex flex-col items-center justify-center flex-1 scale-90">
                   <CardView
                     onclick={() => setSelectedCard(null)}
