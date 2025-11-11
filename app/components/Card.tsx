@@ -34,7 +34,7 @@ export default function Card({ price, category, image, name, onClick }: CardProp
 
         <button
           onClick={onClick}
-          className="px-4 py-2 bg-[#4A4A4A] text-white rounded-lg border hover:bg-white hover:text-black hover:border transition cursor-pointer"
+          className="px-4 py-2 bg-[#4A4A4A] text-white rounded-lg border hover:bg-white hover:text-black hover:border transition cursor-pointer text-sm sm:text-xl"
         >
           Ver Promoção
         </button>

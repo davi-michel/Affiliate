@@ -38,7 +38,7 @@ export default function Page() {
 
         <div className="lg:px-4 flex flex-col justify-center px-auto mt-6">
           <h2 className="text-center text-2xl font-semibold">Comprar</h2>
-          <div className="flex flex-col lg:flex-row justify-between lg:mx-20 mx-4 flex-wrap">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:mx-20 mx-3 mt-3">
             {items.items.map((e, index) => (
               <div key={index}>
                 <Card
@@ -70,24 +70,61 @@ export default function Page() {
 
       <AnimatePresence mode="wait">
         {selectedCard && (
-          <motion.div
-            key={selectedCard.id}
-            className="max-w-[30%] mx-auto"
-            initial={{ x: 150, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: 150, opacity: 0 }}
-            transition={{ duration: 0.35, ease: "easeOut" }}
-          >
-            <CardView
-              onclick={() => setSelectedCard(null)}
-              name={selectedCard.name}
-              description={selectedCard.description}
-              image={selectedCard.image}
-              price={selectedCard.price}
-              category={selectedCard.category}
-            />
-          </motion.div>
+          <AnimatePresence>
+            <motion.div
+              key="sidebar"
+              className="hidden lg:block max-w-[30%] mx-auto"
+              initial={{ x: 150, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 150, opacity: 0 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+            >
+              <CardView
+                onclick={() => setSelectedCard(null)}
+                name={selectedCard.name}
+                description={selectedCard.description}
+                image={selectedCard.image}
+                price={selectedCard.price}
+                category={selectedCard.category}
+              />
+            </motion.div>
+
+            <motion.div
+              key="modal"
+              className="fixed inset-0 bg-black/50 flex items-end justify-center z-50 lg:hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+            >
+              <motion.div
+                initial={{ y: "100%", opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: "100%", opacity: 0 }}
+                transition={{ type: "spring", stiffness: 120, damping: 15 }}
+                className="bg-white rounded-t-3xl shadow-lg w-full h-[85%] p-5 flex flex-col justify-between"
+              >
+                {/* Handle visual */}
+                <div className="w-12 h-1.5 bg-gray-300 rounded-full mx-auto mb-3" />
+
+                {/* Conteúdo do card (reduz proporcionalmente) */}
+                <div className="flex flex-col items-center justify-center flex-1 scale-90">
+                  <CardView
+                    onclick={() => setSelectedCard(null)}
+                    name={selectedCard.name}
+                    description={selectedCard.description}
+                    image={selectedCard.image}
+                    price={selectedCard.price}
+                    category={selectedCard.category}
+                  />
+                </div>
+              </motion.div>
+            </motion.div>
+
+          </AnimatePresence>
+
         )}
+
       </AnimatePresence>
     </div>
   );
